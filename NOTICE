@@ -1,0 +1,16 @@
+Bilingual Skill Routing at 80K Scale
+Copyright 2026 The Authors
+
+The multilingual query extension is derived from:
+
+1. SkillRouter Eval Core
+   https://huggingface.co/datasets/pipizhao/SkillRouter-Eval-Core
+   https://arxiv.org/abs/2603.22455
+
+2. SkillsBench
+   https://github.com/benchflow-ai/skillsbench
+   Licensed under the Apache License, Version 2.0.
+
+The English task text is preserved. Simplified Chinese translations and the
+fixed bilingual-instruction variants are modifications created for this study.
+

@@ -1,0 +1,11 @@
+{
+  "multilingual_e5_small": {
+    "model_id": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+  },
+  "skillrouter_embedding_0_6b": {
+    "model_id": "pipizhao/SkillRouter-Embedding-0.6B",
+    "revision": "c03c9bcee9fce92ab0262bb6dcf54d174a8ba558"
+  }
+}
+

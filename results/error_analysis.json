@@ -1,0 +1,715 @@
+{
+  "methods": {
+    "word-tfidf": {
+      "en": {
+        "hit_count": 27,
+        "task_count": 73,
+        "unique_top1_predictions": 71,
+        "top1_hubs": [
+          {
+            "skill_id": "distractor/dist_pddl-skills_de660494",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/obj-exporter",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/vehicle-dynamics",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/azure-bgp",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": 0.1246,
+        "query_length_hit_p_value": 0.293709
+      },
+      "zh": {
+        "hit_count": 6,
+        "task_count": 73,
+        "unique_top1_predictions": 57,
+        "top1_hubs": [
+          {
+            "skill_id": "development/siyuan-notes-2234839-siyuan-notes-skill",
+            "count": 8
+          },
+          {
+            "skill_id": "development/json-optimization",
+            "count": 6
+          },
+          {
+            "skill_id": "other/pdf-jarredkenny-agency-ai",
+            "count": 2
+          },
+          {
+            "skill_id": "other/journal-kazukinagata-shinkoku",
+            "count": 2
+          },
+          {
+            "skill_id": "other/xlsx-jarredkenny-agency-ai-2",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": -0.1917,
+        "query_length_hit_p_value": 0.104171
+      },
+      "zh_instruction": {
+        "hit_count": 6,
+        "task_count": 73,
+        "unique_top1_predictions": 57,
+        "top1_hubs": [
+          {
+            "skill_id": "development/siyuan-notes-2234839-siyuan-notes-skill",
+            "count": 8
+          },
+          {
+            "skill_id": "development/json-optimization",
+            "count": 6
+          },
+          {
+            "skill_id": "other/csv-workbench",
+            "count": 3
+          },
+          {
+            "skill_id": "other/xlsx-jarredkenny-agency-ai-2",
+            "count": 2
+          },
+          {
+            "skill_id": "distractor/dist_pddl-skills_de660494",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": -0.1917,
+        "query_length_hit_p_value": 0.104171
+      }
+    },
+    "word-bm25": {
+      "en": {
+        "hit_count": 34,
+        "task_count": 73,
+        "unique_top1_predictions": 67,
+        "top1_hubs": [
+          {
+            "skill_id": "gt/simulation-metrics",
+            "count": 3
+          },
+          {
+            "skill_id": "gt/seismic-picker-selection",
+            "count": 2
+          },
+          {
+            "skill_id": "development/file-changes-tracker-liuning0820-python-toolbox",
+            "count": 2
+          },
+          {
+            "skill_id": "development/polyglot-c-py",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/obj-exporter",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": 0.1701,
+        "query_length_hit_p_value": 0.150264
+      },
+      "zh": {
+        "hit_count": 14,
+        "task_count": 73,
+        "unique_top1_predictions": 69,
+        "top1_hubs": [
+          {
+            "skill_id": "other/dotfiles-commit-erwinkn-ai-config",
+            "count": 2
+          },
+          {
+            "skill_id": "distractor/dist_pddl-skills_de660494",
+            "count": 2
+          },
+          {
+            "skill_id": "other/xlsx-danielmiessler-personal-ai-infrastr",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/obj-exporter",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.1833,
+        "query_length_hit_p_value": 0.120613
+      },
+      "zh_instruction": {
+        "hit_count": 9,
+        "task_count": 73,
+        "unique_top1_predictions": 57,
+        "top1_hubs": [
+          {
+            "skill_id": "other/csv-workbench",
+            "count": 6
+          },
+          {
+            "skill_id": "other/json-schema-validator-dkyazzentwatwa-chatgpt-skills-1deb1713",
+            "count": 5
+          },
+          {
+            "skill_id": "development/arxiv-paper-writer",
+            "count": 3
+          },
+          {
+            "skill_id": "design/sym",
+            "count": 3
+          },
+          {
+            "skill_id": "other/xlsx-danielmiessler-personal-ai-infrastr",
+            "count": 3
+          }
+        ],
+        "query_length_hit_spearman": -0.1562,
+        "query_length_hit_p_value": 0.186902
+      }
+    },
+    "char-tfidf": {
+      "en": {
+        "hit_count": 36,
+        "task_count": 73,
+        "unique_top1_predictions": 68,
+        "top1_hubs": [
+          {
+            "skill_id": "gt/seismic-picker-selection",
+            "count": 2
+          },
+          {
+            "skill_id": "other/fix-build-whatifwedigdeeper-claude-template",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/glm-calibration",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/pddl-skills",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/obj-exporter",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": 0.0839,
+        "query_length_hit_p_value": 0.480503
+      },
+      "zh": {
+        "hit_count": 16,
+        "task_count": 73,
+        "unique_top1_predictions": 65,
+        "top1_hubs": [
+          {
+            "skill_id": "development/unit-executor",
+            "count": 4
+          },
+          {
+            "skill_id": "other/og-plurigrid-asi",
+            "count": 3
+          },
+          {
+            "skill_id": "development/skills-smith-happens-xlightsfpptester",
+            "count": 2
+          },
+          {
+            "skill_id": "other/run-comprehensive-tests",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/pddl-skills",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": -0.0157,
+        "query_length_hit_p_value": 0.895016
+      },
+      "zh_instruction": {
+        "hit_count": 18,
+        "task_count": 73,
+        "unique_top1_predictions": 65,
+        "top1_hubs": [
+          {
+            "skill_id": "design/technical-constraints-dylantarre-animation-principles",
+            "count": 4
+          },
+          {
+            "skill_id": "development/hook-developer",
+            "count": 2
+          },
+          {
+            "skill_id": "development/unit-executor",
+            "count": 2
+          },
+          {
+            "skill_id": "other/run-comprehensive-tests",
+            "count": 2
+          },
+          {
+            "skill_id": "other/og-plurigrid-asi",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": 0.0437,
+        "query_length_hit_p_value": 0.713282
+      }
+    },
+    "multilingual-e5-small": {
+      "en": {
+        "hit_count": 10,
+        "task_count": 73,
+        "unique_top1_predictions": 48,
+        "top1_hubs": [
+          {
+            "skill_id": "data/file-analysis",
+            "count": 10
+          },
+          {
+            "skill_id": "other/when-optimizing-prompts-use-prompt-optimization-analyzer",
+            "count": 9
+          },
+          {
+            "skill_id": "devops/workflows",
+            "count": 4
+          },
+          {
+            "skill_id": "other/essays",
+            "count": 3
+          },
+          {
+            "skill_id": "other/commit-monsterdeveloper-moysklad-ts",
+            "count": 3
+          }
+        ],
+        "query_length_hit_spearman": 0.0416,
+        "query_length_hit_p_value": 0.726767
+      },
+      "zh": {
+        "hit_count": 0,
+        "task_count": 73,
+        "unique_top1_predictions": 48,
+        "top1_hubs": [
+          {
+            "skill_id": "development/posts-gongfukangee-gongfukangee-gith",
+            "count": 12
+          },
+          {
+            "skill_id": "other/structure-design-skill-maxoreric-sop-engine-2",
+            "count": 4
+          },
+          {
+            "skill_id": "other/operations-iofu728-blog",
+            "count": 3
+          },
+          {
+            "skill_id": "devops/git-kingreatwill-open",
+            "count": 3
+          },
+          {
+            "skill_id": "other/system-create-skill",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": 0.0,
+        "query_length_hit_p_value": 1.0
+      },
+      "zh_instruction": {
+        "hit_count": 0,
+        "task_count": 73,
+        "unique_top1_predictions": 47,
+        "top1_hubs": [
+          {
+            "skill_id": "development/posts-gongfukangee-gongfukangee-gith",
+            "count": 7
+          },
+          {
+            "skill_id": "other/logging-monitor",
+            "count": 5
+          },
+          {
+            "skill_id": "other/implementation-planner-chaitin-monkeycodeofficialpl",
+            "count": 4
+          },
+          {
+            "skill_id": "devops/git-kingreatwill-open",
+            "count": 3
+          },
+          {
+            "skill_id": "other/system-create-skill",
+            "count": 2
+          }
+        ],
+        "query_length_hit_spearman": 0.0,
+        "query_length_hit_p_value": 1.0
+      }
+    },
+    "skillrouter-emb-0.6b": {
+      "en": {
+        "hit_count": 33,
+        "task_count": 73,
+        "unique_top1_predictions": 71,
+        "top1_hubs": [
+          {
+            "skill_id": "other/debug-zhiruifeng-localagentcrew",
+            "count": 2
+          },
+          {
+            "skill_id": "distractor/dist_pddl-skills_31fd9fd1",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/pid-controller",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/azure-bgp",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.1417,
+        "query_length_hit_p_value": 0.231662
+      },
+      "zh": {
+        "hit_count": 30,
+        "task_count": 73,
+        "unique_top1_predictions": 71,
+        "top1_hubs": [
+          {
+            "skill_id": "gt/economic-dispatch",
+            "count": 2
+          },
+          {
+            "skill_id": "distractor/dist_pddl-skills_31fd9fd1",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/pid-controller",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/azure-bgp",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.1823,
+        "query_length_hit_p_value": 0.122576
+      },
+      "zh_instruction": {
+        "hit_count": 19,
+        "task_count": 73,
+        "unique_top1_predictions": 69,
+        "top1_hubs": [
+          {
+            "skill_id": "development/codex-reasoning",
+            "count": 2
+          },
+          {
+            "skill_id": "other/feature-implementer-chaitin-monkeycodeofficialpl",
+            "count": 2
+          },
+          {
+            "skill_id": "distractor/dist_pddl-skills_31fd9fd1",
+            "count": 2
+          },
+          {
+            "skill_id": "other/auto-cutter",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.1059,
+        "query_length_hit_p_value": 0.372387
+      }
+    },
+    "skillrouter+char-rrf": {
+      "en": {
+        "hit_count": 36,
+        "task_count": 73,
+        "unique_top1_predictions": 70,
+        "top1_hubs": [
+          {
+            "skill_id": "gt/fjsp-baseline-repair-with-downtime-and-policy",
+            "count": 2
+          },
+          {
+            "skill_id": "other/fix-build-whatifwedigdeeper-claude-template",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/pddl-skills",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/vehicle-dynamics",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.0306,
+        "query_length_hit_p_value": 0.797451
+      },
+      "zh": {
+        "hit_count": 31,
+        "task_count": 73,
+        "unique_top1_predictions": 71,
+        "top1_hubs": [
+          {
+            "skill_id": "gt/pddl-skills",
+            "count": 2
+          },
+          {
+            "skill_id": "other/xlsx-danielmiessler-personal-ai-infrastr",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/mesh-analysis",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/pid-controller",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/azure-bgp",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": 0.0,
+        "query_length_hit_p_value": 1.0
+      },
+      "zh_instruction": {
+        "hit_count": 29,
+        "task_count": 73,
+        "unique_top1_predictions": 70,
+        "top1_hubs": [
+          {
+            "skill_id": "development/codex-reasoning",
+            "count": 2
+          },
+          {
+            "skill_id": "gt/pddl-skills",
+            "count": 2
+          },
+          {
+            "skill_id": "other/xlsx-danielmiessler-personal-ai-infrastr",
+            "count": 2
+          },
+          {
+            "skill_id": "design/technical-constraints-dylantarre-animation-principles",
+            "count": 1
+          },
+          {
+            "skill_id": "gt/pid-controller",
+            "count": 1
+          }
+        ],
+        "query_length_hit_spearman": -0.0233,
+        "query_length_hit_p_value": 0.8452
+      }
+    }
+  },
+  "pairwise": {
+    "zh:char-tfidf->skillrouter-emb-0.6b": {
+      "gains": [
+        "3d-scan-calc",
+        "dapt-intrusion-detection",
+        "dialogue-parser",
+        "earthquake-phase-association",
+        "exoplanet-detection-period",
+        "flood-risk-analysis",
+        "glm-lake-mendota",
+        "gravitational-wave-detection",
+        "lab-unit-harmonization",
+        "latex-formula-extraction",
+        "manufacturing-codebook-normalization",
+        "manufacturing-equipment-maintenance",
+        "paper-anonymizer",
+        "pedestrian-traffic-counting",
+        "react-performance-debugging",
+        "sec-financial-report",
+        "seismic-phase-picking",
+        "suricata-custom-exfil",
+        "threejs-structure-parser",
+        "video-filler-word-remover",
+        "xlsx-recover-data"
+      ],
+      "losses": [
+        "pddl-tpp-planning",
+        "powerlifting-coef-calc",
+        "software-dependency-audit",
+        "spring-boot-jakarta-migration",
+        "threejs-to-obj",
+        "trend-anomaly-causal-inference",
+        "virtualhome-agent-planning"
+      ],
+      "shared_hits": [
+        "adaptive-cruise-control",
+        "azure-bgp-oscillation-route-leak",
+        "civ6-adjacency-optimizer",
+        "earthquake-plate-calculation",
+        "grid-dispatch-operator",
+        "pg-essay-to-audiobook",
+        "setup-fuzzing-py",
+        "syzkaller-ppdev-syzlang",
+        "taxonomy-tree-merge"
+      ]
+    },
+    "zh:skillrouter-emb-0.6b->skillrouter+char-rrf": {
+      "gains": [
+        "dynamic-object-aware-egomotion",
+        "manufacturing-fjsp-optimization",
+        "pddl-tpp-planning",
+        "powerlifting-coef-calc",
+        "python-scala-translation",
+        "threejs-to-obj",
+        "trend-anomaly-causal-inference",
+        "video-silence-remover",
+        "virtualhome-agent-planning"
+      ],
+      "losses": [
+        "dapt-intrusion-detection",
+        "exoplanet-detection-period",
+        "gravitational-wave-detection",
+        "paper-anonymizer",
+        "pedestrian-traffic-counting",
+        "react-performance-debugging",
+        "seismic-phase-picking",
+        "xlsx-recover-data"
+      ],
+      "shared_hits": [
+        "3d-scan-calc",
+        "adaptive-cruise-control",
+        "azure-bgp-oscillation-route-leak",
+        "civ6-adjacency-optimizer",
+        "dialogue-parser",
+        "earthquake-phase-association",
+        "earthquake-plate-calculation",
+        "flood-risk-analysis",
+        "glm-lake-mendota",
+        "grid-dispatch-operator",
+        "lab-unit-harmonization",
+        "latex-formula-extraction",
+        "manufacturing-codebook-normalization",
+        "manufacturing-equipment-maintenance",
+        "pg-essay-to-audiobook",
+        "sec-financial-report",
+        "setup-fuzzing-py",
+        "suricata-custom-exfil",
+        "syzkaller-ppdev-syzlang",
+        "taxonomy-tree-merge",
+        "threejs-structure-parser",
+        "video-filler-word-remover"
+      ]
+    },
+    "zh_instruction:char-tfidf->skillrouter-emb-0.6b": {
+      "gains": [
+        "3d-scan-calc",
+        "dialogue-parser",
+        "earthquake-phase-association",
+        "econ-detrending-correlation",
+        "glm-lake-mendota",
+        "gravitational-wave-detection",
+        "lab-unit-harmonization",
+        "manufacturing-codebook-normalization",
+        "manufacturing-equipment-maintenance",
+        "paper-anonymizer",
+        "react-performance-debugging",
+        "seismic-phase-picking",
+        "suricata-custom-exfil",
+        "xlsx-recover-data"
+      ],
+      "losses": [
+        "earthquake-plate-calculation",
+        "energy-ac-optimal-power-flow",
+        "grid-dispatch-operator",
+        "latex-formula-extraction",
+        "pddl-tpp-planning",
+        "powerlifting-coef-calc",
+        "setup-fuzzing-py",
+        "software-dependency-audit",
+        "spring-boot-jakarta-migration",
+        "taxonomy-tree-merge",
+        "threejs-to-obj",
+        "trend-anomaly-causal-inference",
+        "virtualhome-agent-planning"
+      ],
+      "shared_hits": [
+        "adaptive-cruise-control",
+        "azure-bgp-oscillation-route-leak",
+        "civ6-adjacency-optimizer",
+        "pg-essay-to-audiobook",
+        "syzkaller-ppdev-syzlang"
+      ]
+    },
+    "zh_instruction:skillrouter-emb-0.6b->skillrouter+char-rrf": {
+      "gains": [
+        "data-to-d3",
+        "dynamic-object-aware-egomotion",
+        "earthquake-plate-calculation",
+        "energy-ac-optimal-power-flow",
+        "grid-dispatch-operator",
+        "latex-formula-extraction",
+        "pddl-tpp-planning",
+        "powerlifting-coef-calc",
+        "python-scala-translation",
+        "setup-fuzzing-py",
+        "software-dependency-audit",
+        "taxonomy-tree-merge",
+        "threejs-structure-parser",
+        "threejs-to-obj",
+        "video-filler-word-remover",
+        "virtualhome-agent-planning"
+      ],
+      "losses": [
+        "3d-scan-calc",
+        "econ-detrending-correlation",
+        "gravitational-wave-detection",
+        "paper-anonymizer",
+        "seismic-phase-picking",
+        "xlsx-recover-data"
+      ],
+      "shared_hits": [
+        "adaptive-cruise-control",
+        "azure-bgp-oscillation-route-leak",
+        "civ6-adjacency-optimizer",
+        "dialogue-parser",
+        "earthquake-phase-association",
+        "glm-lake-mendota",
+        "lab-unit-harmonization",
+        "manufacturing-codebook-normalization",
+        "manufacturing-equipment-maintenance",
+        "pg-essay-to-audiobook",
+        "react-performance-debugging",
+        "suricata-custom-exfil",
+        "syzkaller-ppdev-syzlang"
+      ]
+    }
+  }
+}

@@ -10,18 +10,12 @@ SkillRouter Eval Core task file:
 - Upstream task source: <https://github.com/benchflow-ai/skillsbench>
 
 The original SkillsBench repository is licensed under Apache License 2.0. The
-English task text remains unchanged. The Simplified Chinese and code-switched
-variants are modifications and are distributed under Apache License 2.0. Users
-must retain this attribution and the upstream notices.
+English task text remains unchanged. The Simplified Chinese translations and
+the fixed bilingual-instruction-plus-Chinese variants are modifications and are
+distributed under Apache License 2.0. Users must retain this attribution and
+the upstream notices. The complete license text is included as
+`LICENSE-APACHE-2.0`, with attribution in `NOTICE`.
 
 The large candidate pool, relevance labels, and model caches are not committed.
 The download script retrieves them from the public SkillRouter release and
 verifies their SHA-256 hashes.
-
-## Personal-registry pilot
-
-The small catalog snapshot and query set under `data/catalog.json` and
-`data/queries.json` are provided for research reproduction. Skill descriptions
-retain the licenses and attribution of their original skill packages. Do not
-assume that this repository relicenses third-party skill text.
-

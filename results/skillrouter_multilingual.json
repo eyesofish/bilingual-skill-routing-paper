@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T11:23:42Z",
+  "tier": "hard",
+  "skill_count": 79141,
+  "task_count": 73,
+  "query_variant_count": 219,
+  "privacy_excluded_tasks": [
+    "court-form-filling"
+  ],
+  "top_k": 20,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20270827,
+  "environment": {
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "scikit_learn": "1.9.0",
+    "torch": "2.13.0",
+    "machine": "Apple Mac mini",
+    "chip": "Apple M4 Pro",
+    "cpu_cores": 14,
+    "memory_gb": 64,
+    "accelerator": "Apple MPS",
+    "operating_system": "macOS 26.6.1"
+  },
+  "results": [
+    {
+      "name": "word-tfidf",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.3699,
+          "hit_at_5": 0.5753,
+          "mrr_at_20": 0.4651,
+          "recall_at_10": 0.468,
+          "ndcg_at_10": 0.3698,
+          "hit_at_1_ci95": [
+            0.2603,
+            0.4795
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.0822,
+          "hit_at_5": 0.2055,
+          "mrr_at_20": 0.1408,
+          "recall_at_10": 0.1774,
+          "ndcg_at_10": 0.1155,
+          "hit_at_1_ci95": [
+            0.0274,
+            0.1507
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.0822,
+          "hit_at_5": 0.2055,
+          "mrr_at_20": 0.1403,
+          "recall_at_10": 0.1774,
+          "ndcg_at_10": 0.1144,
+          "hit_at_1_ci95": [
+            0.0274,
+            0.1507
+          ]
+        }
+      },
+      "query_latency_ms": 5.727,
+      "setup_seconds": 2.44,
+      "index_details": {
+        "setup_type": "fit_sparse_index",
+        "features": 300000,
+        "document_matrix_shape": [
+          79141,
+          300000
+        ],
+        "document_matrix_nnz": 3303523
+      }
+    },
+    {
+      "name": "word-bm25",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.4658,
+          "hit_at_5": 0.6027,
+          "mrr_at_20": 0.5215,
+          "recall_at_10": 0.4602,
+          "ndcg_at_10": 0.3911,
+          "hit_at_1_ci95": [
+            0.3562,
+            0.5753
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.1918,
+          "hit_at_5": 0.3014,
+          "mrr_at_20": 0.2311,
+          "recall_at_10": 0.2171,
+          "ndcg_at_10": 0.1678,
+          "hit_at_1_ci95": [
+            0.1096,
+            0.2877
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.1233,
+          "hit_at_5": 0.2466,
+          "mrr_at_20": 0.1738,
+          "recall_at_10": 0.171,
+          "ndcg_at_10": 0.1269,
+          "hit_at_1_ci95": [
+            0.0548,
+            0.2055
+          ]
+        }
+      },
+      "query_latency_ms": 5.581,
+      "setup_seconds": 0.606,
+      "index_details": {
+        "setup_type": "fit_sparse_index",
+        "features": 65723,
+        "document_matrix_shape": [
+          79141,
+          65723
+        ],
+        "document_matrix_nnz": 1761266,
+        "k1": 1.2,
+        "b": 0.75
+      }
+    },
+    {
+      "name": "char-tfidf",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.4932,
+          "hit_at_5": 0.6849,
+          "mrr_at_20": 0.5666,
+          "recall_at_10": 0.501,
+          "ndcg_at_10": 0.4322,
+          "hit_at_1_ci95": [
+            0.3836,
+            0.6027
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.2192,
+          "hit_at_5": 0.4384,
+          "mrr_at_20": 0.3123,
+          "recall_at_10": 0.3136,
+          "ndcg_at_10": 0.2346,
+          "hit_at_1_ci95": [
+            0.1233,
+            0.3151
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.2466,
+          "hit_at_5": 0.4384,
+          "mrr_at_20": 0.3322,
+          "recall_at_10": 0.2942,
+          "ndcg_at_10": 0.2365,
+          "hit_at_1_ci95": [
+            0.1507,
+            0.3425
+          ]
+        }
+      },
+      "query_latency_ms": 14.779,
+      "setup_seconds": 11.338,
+      "index_details": {
+        "setup_type": "fit_sparse_index",
+        "features": 300000,
+        "document_matrix_shape": [
+          79141,
+          300000
+        ],
+        "document_matrix_nnz": 36232780
+      }
+    },
+    {
+      "name": "multilingual-e5-small",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.137,
+          "hit_at_5": 0.2055,
+          "mrr_at_20": 0.1637,
+          "recall_at_10": 0.1546,
+          "ndcg_at_10": 0.1193,
+          "hit_at_1_ci95": [
+            0.0685,
+            0.2192
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "mrr_at_20": 0.0,
+          "recall_at_10": 0.0,
+          "ndcg_at_10": 0.0,
+          "hit_at_1_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "mrr_at_20": 0.0,
+          "recall_at_10": 0.0,
+          "ndcg_at_10": 0.0,
+          "hit_at_1_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "query_latency_ms": 12.034,
+      "setup_seconds": 0.071,
+      "index_details": {
+        "setup_type": "load_and_validate_cache",
+        "model": "intfloat/multilingual-e5-small",
+        "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "device": "mps",
+        "document_max_length": 512,
+        "query_max_length": 512,
+        "batch_size": 128,
+        "embedding_shape": [
+          79141,
+          384
+        ],
+        "index_source": "cache"
+      }
+    },
+    {
+      "name": "skillrouter-emb-0.6b",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.4521,
+          "hit_at_5": 0.6164,
+          "mrr_at_20": 0.5383,
+          "recall_at_10": 0.5046,
+          "ndcg_at_10": 0.4116,
+          "hit_at_1_ci95": [
+            0.3425,
+            0.5616
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.411,
+          "hit_at_5": 0.5616,
+          "mrr_at_20": 0.4932,
+          "recall_at_10": 0.4383,
+          "ndcg_at_10": 0.3658,
+          "hit_at_1_ci95": [
+            0.3014,
+            0.5209
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.2603,
+          "hit_at_5": 0.4658,
+          "mrr_at_20": 0.3592,
+          "recall_at_10": 0.3893,
+          "ndcg_at_10": 0.2979,
+          "hit_at_1_ci95": [
+            0.1644,
+            0.3699
+          ]
+        }
+      },
+      "query_latency_ms": 140.807,
+      "setup_seconds": 0.139,
+      "index_details": {
+        "setup_type": "load_and_validate_cache",
+        "model": "pipizhao/SkillRouter-Embedding-0.6B",
+        "model_revision": "c03c9bcee9fce92ab0262bb6dcf54d174a8ba558",
+        "device": "mps",
+        "document_max_length": 512,
+        "query_max_length": 512,
+        "batch_size": 8,
+        "embedding_shape": [
+          79141,
+          1024
+        ],
+        "index_source": "cache",
+        "document_fields": "name|description"
+      }
+    },
+    {
+      "name": "skillrouter+char-rrf",
+      "by_language": {
+        "en": {
+          "hit_at_1": 0.4932,
+          "hit_at_5": 0.6575,
+          "mrr_at_20": 0.5782,
+          "recall_at_10": 0.5494,
+          "ndcg_at_10": 0.4556,
+          "hit_at_1_ci95": [
+            0.3836,
+            0.6164
+          ]
+        },
+        "zh": {
+          "hit_at_1": 0.4247,
+          "hit_at_5": 0.6438,
+          "mrr_at_20": 0.5134,
+          "recall_at_10": 0.4602,
+          "ndcg_at_10": 0.3747,
+          "hit_at_1_ci95": [
+            0.3151,
+            0.5342
+          ]
+        },
+        "zh_instruction": {
+          "hit_at_1": 0.3973,
+          "hit_at_5": 0.6027,
+          "mrr_at_20": 0.4868,
+          "recall_at_10": 0.4209,
+          "ndcg_at_10": 0.3526,
+          "hit_at_1_ci95": [
+            0.2877,
+            0.5068
+          ]
+        }
+      },
+      "query_latency_ms": 155.594,
+      "setup_seconds": 11.477,
+      "index_details": {
+        "members": [
+          "skillrouter-emb-0.6b",
+          "char-tfidf"
+        ],
+        "rrf_constant": 60
+      }
+    }
+  ],
+  "significance": [
+    {
+      "language": "zh",
+      "left": "word-tfidf",
+      "right": "multilingual-e5-small",
+      "left_only": 6,
+      "right_only": 0,
+      "discordant": 6,
+      "p_value_two_sided": 0.03125
+    },
+    {
+      "language": "zh",
+      "left": "word-bm25",
+      "right": "multilingual-e5-small",
+      "left_only": 14,
+      "right_only": 0,
+      "discordant": 14,
+      "p_value_two_sided": 0.000122
+    },
+    {
+      "language": "zh",
+      "left": "char-tfidf",
+      "right": "multilingual-e5-small",
+      "left_only": 16,
+      "right_only": 0,
+      "discordant": 16,
+      "p_value_two_sided": 3.1e-05
+    },
+    {
+      "language": "zh",
+      "left": "word-tfidf",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 1,
+      "right_only": 25,
+      "discordant": 26,
+      "p_value_two_sided": 1e-06
+    },
+    {
+      "language": "zh",
+      "left": "word-bm25",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 5,
+      "right_only": 21,
+      "discordant": 26,
+      "p_value_two_sided": 0.002494
+    },
+    {
+      "language": "zh",
+      "left": "char-tfidf",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 7,
+      "right_only": 21,
+      "discordant": 28,
+      "p_value_two_sided": 0.012541
+    },
+    {
+      "language": "zh_instruction",
+      "left": "word-tfidf",
+      "right": "multilingual-e5-small",
+      "left_only": 6,
+      "right_only": 0,
+      "discordant": 6,
+      "p_value_two_sided": 0.03125
+    },
+    {
+      "language": "zh_instruction",
+      "left": "word-bm25",
+      "right": "multilingual-e5-small",
+      "left_only": 9,
+      "right_only": 0,
+      "discordant": 9,
+      "p_value_two_sided": 0.003906
+    },
+    {
+      "language": "zh_instruction",
+      "left": "char-tfidf",
+      "right": "multilingual-e5-small",
+      "left_only": 18,
+      "right_only": 0,
+      "discordant": 18,
+      "p_value_two_sided": 8e-06
+    },
+    {
+      "language": "zh_instruction",
+      "left": "word-tfidf",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 3,
+      "right_only": 16,
+      "discordant": 19,
+      "p_value_two_sided": 0.004425
+    },
+    {
+      "language": "zh_instruction",
+      "left": "word-bm25",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 6,
+      "right_only": 16,
+      "discordant": 22,
+      "p_value_two_sided": 0.052479
+    },
+    {
+      "language": "zh_instruction",
+      "left": "char-tfidf",
+      "right": "skillrouter-emb-0.6b",
+      "left_only": 13,
+      "right_only": 14,
+      "discordant": 27,
+      "p_value_two_sided": 1.0
+    }
+  ]
+}

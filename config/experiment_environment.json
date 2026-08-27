@@ -1,0 +1,9 @@
+{
+  "machine": "Apple Mac mini",
+  "chip": "Apple M4 Pro",
+  "cpu_cores": 14,
+  "memory_gb": 64,
+  "accelerator": "Apple MPS",
+  "operating_system": "macOS 26.6.1"
+}
+

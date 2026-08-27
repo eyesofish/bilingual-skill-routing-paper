@@ -15,6 +15,11 @@ PRIVACY_EXCLUDED_TASKS = {"court-form-filling"}
 CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 LATIN = re.compile(r"[A-Za-z]")
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+ZH_INSTRUCTION_PREFIX = (
+    "请完成下面这个 task。Please follow every requirement，并原样保留所有 "
+    "technical identifiers、file paths、API names、code symbols、"
+    "numeric constraints 和 output schema：\n\n"
+)
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -77,9 +82,11 @@ def main() -> None:
             raise ValueError(f"English source changed for {task_id}")
         if not CJK.search(query["query_zh"]):
             raise ValueError(f"Chinese query has no CJK text: {task_id}")
-        if not CJK.search(query["query_mixed"]) or not LATIN.search(query["query_mixed"]):
-            raise ValueError(f"mixed query is not bilingual: {task_id}")
-        combined = query["query_zh"] + "\n" + query["query_mixed"]
+        if query["query_zh_instruction"] != ZH_INSTRUCTION_PREFIX + query["query_zh"]:
+            raise ValueError(f"invalid fixed instruction wrapper: {task_id}")
+        if not LATIN.search(query["query_zh_instruction"]):
+            raise ValueError(f"instruction-prefixed query has no Latin text: {task_id}")
+        combined = query["query_zh"] + "\n" + query["query_zh_instruction"]
         if EMAIL.search(combined):
             raise ValueError(f"possible personal identifier in translated query: {task_id}")
         length_ratios.append(len(query["query_zh"]) / max(1, len(query["query_en"])))

@@ -10,7 +10,8 @@
 - Corrected semantic inversions and inaccurate technical translations.
 - Removed invented examples, outputs, and requirements.
 - Restored exact filenames, paths, code symbols, inline literals, fenced code blocks, and output schemas.
-- Kept `query_mixed` complete and substantially bilingual with natural Chinese instructions and unchanged English technical identifiers.
+- Verified that `query_zh_instruction` is the fixed bilingual routing
+  instruction followed by the complete audited Chinese task.
 - Preserved every `query_en` value and all source metadata.
 
 ## Corrected task IDs
@@ -56,3 +57,10 @@
   underlying 73 engineering tasks or verify their domain-specific outputs.
 - No known translation omission, semantic change, invented requirement, broken
   identifier, or invalid JSON remains after this audit.
+
+## Post-review correction
+
+An independent release review found that the `mars-clouds-clustering` heading
+used “Earth” instead of “Mars” in Chinese. The heading was corrected to
+“Mars cloud clustering optimization,” the checksum was regenerated, and all
+experiments were rerun.

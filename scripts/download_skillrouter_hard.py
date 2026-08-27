@@ -5,11 +5,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import urllib.request
 from pathlib import Path
-
-
-BASE_URL = "https://huggingface.co/datasets/pipizhao/SkillRouter-Eval-Core/resolve/main"
 
 
 def sha256(path: Path) -> str:
@@ -29,13 +27,6 @@ def load_checksums(path: Path) -> dict[str, str]:
     return checksums
 
 
-def download(relative: str, output: Path) -> None:
-    output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = output.with_suffix(output.suffix + ".tmp")
-    urllib.request.urlretrieve(f"{BASE_URL}/{relative}", temporary)
-    temporary.replace(output)
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -44,14 +35,29 @@ def main() -> None:
     parser.add_argument(
         "--checksums", type=Path, default=Path("data/skillrouter-hard.sha256")
     )
+    parser.add_argument(
+        "--dataset-config",
+        type=Path,
+        default=Path("config/dataset_revisions.json"),
+    )
     args = parser.parse_args()
 
+    dataset = json.loads(args.dataset_config.read_text(encoding="utf-8"))[
+        "skillrouter_eval_core"
+    ]
+    base_url = (
+        f"https://huggingface.co/datasets/{dataset['repo_id']}/resolve/"
+        f"{dataset['revision']}"
+    )
     checksums = load_checksums(args.checksums)
     for relative, expected in checksums.items():
         output = args.output / relative
         if not output.is_file() or sha256(output) != expected:
             print(f"downloading {relative}")
-            download(relative, output)
+            temporary = output.with_suffix(output.suffix + ".tmp")
+            output.parent.mkdir(parents=True, exist_ok=True)
+            urllib.request.urlretrieve(f"{base_url}/{relative}", temporary)
+            temporary.replace(output)
         actual = sha256(output)
         if actual != expected:
             raise ValueError(f"checksum mismatch for {relative}: {actual}")
@@ -60,4 +66,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
