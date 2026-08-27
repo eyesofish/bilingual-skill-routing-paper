@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "api-design",
+      "description": "Design REST or RPC API endpoints.",
+      "when_to_use": "Use to design an API, define endpoints, or 接口设计.",
+      "aliases": [
+        "api",
+        "接口"
+      ],
+      "tags": [
+        "api",
+        "design"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/api-design/SKILL.md"
+    },
+    {
+      "name": "asu",
+      "description": "中文求职经历酥化技能：根据目标岗位把真实经历重组为岗位定位、简历要点、项目亮点和 HR 开场白；当用户输入“/asu”“我要酥化”、要求包装或改写经历、项目，或写 HR 自我介绍时使用。若用户明确要求“阿酥同款”、复刻简历模板或生成对应 HTML/PDF，则交给 /asu-resume。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/asu/SKILL.md"
+    },
+    {
+      "name": "bilingual-tech-terms",
+      "description": "面向中文背景的软件工程师做北美技术求职术语训练。用户说“带我过术语”“中英文术语抽查”“你说中文我选英文”“帮我把专业词汇对上英文”，或指定 Markdown、文档目录、代码仓库并要求复习其中的技术词汇时使用。读取用户指定资料，提取有证据的中文概念与标准英文术语，用 ask_user 每次只出一道“中文题干 + 英文 choices”选择题；答后给一句纠正和业务语境，并按每 3 道新题插入 1 道错题或薄弱题的节奏滚动回顾，持久化进度以便暂停后继续。不要用于普通翻译、完整模拟面试、代码仓库带读、英语作文润色或语音训练。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/bilingual-tech-terms/SKILL.md"
+    },
+    {
+      "name": "code-mentor",
+      "description": "大厂资深 mentor 风格的代码 DFS 带读模式。调用场景：用户拿到一个新代码仓库，希望通过项目深读把自己从\"力扣水平\"拉到\"3 年开发水平\"——可能是面试准备、入职新项目熟悉代码、或单纯吃透一个开源项目。Agent 会先静默分析整个项目，生成章节化的问题骨架（带前置 P + 主问 Q checkbox），然后每轮只钻一个具体代码实体（一个变量 / 一个函数 / 一行代码），先抛 A/B/C/D 让用户猜再精修，允许用户随时插问。注意：单次代码问题 / 一次性 review / 让 AI 直接写实现的请求**不要**调用本 skill。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/code-mentor/SKILL.md"
+    },
+    {
+      "name": "code-review",
+      "description": "Review code changes for bugs and regressions.",
+      "when_to_use": "Use when the user asks to review code, check code, do a PR review, 检查代码.",
+      "aliases": [
+        "review-code",
+        "检查代码"
+      ],
+      "tags": [
+        "review",
+        "code"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/code-review/SKILL.md"
+    },
+    {
+      "name": "contributor",
+      "description": "GitHub 开源贡献辅助技能：根据目标公司和岗位寻找活跃项目，优先扫描 typo、README、Markdown、坏链接和 formatting 等机会，先展示候选与改动方案并完成验证，经用户明确确认后再 fork、push 和提交 PR，合并后把 contribution graph 酥化为 /asu 可用的简历素材；当用户输入“/contributor”、想做 first contribution、寻找开源小活或把 PR 写进简历时使用。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/contributor/SKILL.md"
+    },
+    {
+      "name": "debug-error",
+      "description": "Diagnose a stack trace or failing test.",
+      "when_to_use": "Use to debug an error, read a stack trace, or 调试 a crash.",
+      "aliases": [
+        "debug",
+        "调试"
+      ],
+      "tags": [
+        "debug",
+        "error"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/debug-error/SKILL.md"
+    },
+    {
+      "name": "explain-code",
+      "description": "Explain what a function or file does.",
+      "when_to_use": "Use to explain code, summarize a module, or 解释代码.",
+      "aliases": [
+        "explain",
+        "解释代码"
+      ],
+      "tags": [
+        "explain",
+        "understand"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/explain-code/SKILL.md"
+    },
+    {
+      "name": "git-commit",
+      "description": "Stage changes and write a clear commit message.",
+      "when_to_use": "Use to write a commit message, stage files, or 提交代码.",
+      "aliases": [
+        "commit",
+        "提交"
+      ],
+      "tags": [
+        "git",
+        "commit"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/git-commit/SKILL.md"
+    },
+    {
+      "name": "goal",
+      "description": "Main-session goal-mode execution for Copilot. Use when the prompt explicitly asks for /goal, new goal, goal mode, continue an active goal, keep working until done, fix everything, no escape, or verify and prove it. Converts the ask into a persisted Active Goal, inspects first, makes real fixes, records proof, prevents drift and fake completion, and closes only after strict audit.",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/goal/SKILL.md"
+    },
+    {
+      "name": "lint-helper",
+      "description": "Run and explain linters, fix style issues.",
+      "when_to_use": "Use to lint code or fix formatting problems.",
+      "aliases": [],
+      "tags": [
+        "lint",
+        "style"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/lint-helper/SKILL.md"
+    },
+    {
+      "name": "paper-reading-guide",
+      "description": "陪读【单篇】论文的交互式导读:对一篇论文边读边讲、逐节推进、随时答问。覆盖 控制+深度学习(强化学习、学习控制、系统辨识、模仿学习、sim-to-real)与声视觉/ 音频-视觉(视听融合、声源视觉定位、视听分离、跨模态),也适用相邻机器学习论文。 触发词:\"带我读这篇\"\"帮我快速读懂\"\"讲讲这篇\"\"精读 xxx.pdf\"\"这篇在讲什么\"。 ★边界:只处理\"一篇 + 交互讲解\"。若用户要\"一批论文\"\"整理创新点\"\"出对比表/ 综述表\",那属于批量文献整理,应交给专门的批量整理技能(若已安装),不要用本技能 硬扛。也不用于写代码或通用问答。默认跟随用户语言(中文优先)。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/paper-reading-guide/SKILL.md"
+    },
+    {
+      "name": "pdf-export",
+      "description": "Export documents to PDF.",
+      "when_to_use": "Use to generate a PDF from markdown or HTML.",
+      "aliases": [],
+      "tags": [
+        "pdf",
+        "export"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/pdf-export/SKILL.md"
+    },
+    {
+      "name": "perf-profile",
+      "description": "Profile and optimize performance hotspots.",
+      "when_to_use": "Use to profile slow code, reduce latency, or 性能优化.",
+      "aliases": [
+        "perf",
+        "性能优化"
+      ],
+      "tags": [
+        "performance",
+        "profiling"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/perf-profile/SKILL.md"
+    },
+    {
+      "name": "refactor",
+      "description": "Restructure code without changing behavior.",
+      "when_to_use": "Use to extract functions, simplify, or 重构 code safely.",
+      "aliases": [
+        "重构"
+      ],
+      "tags": [
+        "refactor",
+        "cleanup"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/refactor/SKILL.md"
+    },
+    {
+      "name": "regex-helper",
+      "description": "Build and explain regular expressions.",
+      "when_to_use": "Use to write a regex, match a pattern, or 正则.",
+      "aliases": [
+        "regex",
+        "正则"
+      ],
+      "tags": [
+        "regex",
+        "pattern"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/regex-helper/SKILL.md"
+    },
+    {
+      "name": "rename-symbol",
+      "description": "Rename a symbol across the codebase.",
+      "when_to_use": "Use to rename a variable or function, or 重命名.",
+      "aliases": [
+        "rename",
+        "重命名"
+      ],
+      "tags": [
+        "rename",
+        "refactor"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/rename-symbol/SKILL.md"
+    },
+    {
+      "name": "repo-resume-architect",
+      "description": "基于真实代码仓库提炼“可信、能讲、可验证”的架构师简历与面试资产。用户要求“扫描这个仓库提炼简历亮点”“按 5 年以上架构师做项目复盘”“生成 S 级亮点、系统优化专项、1/5 分钟项目介绍、JD 匹配或反吹牛审查”，或判断项目能否包装成 AI 应用、RAG、Agent、Workflow、平台、分布式、存储、AI 性能优化经历时使用。必须引用 file:line、调用链、表/配置/测试等证据，区分已实现、强推导和可扩展设计。不要用于单个代码问题、普通 code review、交互式代码带读、纯行为面试故事或脱离仓库的通用简历润色。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/repo-resume-architect/SKILL.md"
+    },
+    {
+      "name": "research-paper-writing",
+      "description": "Improve academic paper writing quality for ML/CV/NLP-style papers with clear section structure, paragraph flow, and reviewer-facing presentation. Use when drafting or revising Abstract, Introduction, Related Work, Method, Experiments, or Conclusion; polishing figures/tables; checking claim-support alignment; or performing self-review before submission.",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/research-paper-writing/SKILL.md"
+    },
+    {
+      "name": "security-review",
+      "description": "Audit code for security vulnerabilities.",
+      "when_to_use": "Use for security review, threat modeling, 安全审查.",
+      "aliases": [
+        "安全审查"
+      ],
+      "tags": [
+        "security",
+        "review"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/security-review/SKILL.md"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/skill-creator/SKILL.md"
+    },
+    {
+      "name": "sql-query",
+      "description": "Write and optimize SQL queries.",
+      "when_to_use": "Use to write a SQL query, join tables, or 写SQL.",
+      "aliases": [
+        "sql",
+        "查询"
+      ],
+      "tags": [
+        "sql",
+        "database"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/sql-query/SKILL.md"
+    },
+    {
+      "name": "text-to-speech",
+      "description": "把文字/故事合成朗读音频（mp3）和同步字幕，供通勤磨耳朵、跟读和面试口语练习。调用场景：用户说「读成语音 / 转成音频 / 配音 / 生成通勤 mp3 / 做成有声版」，想批量合并多篇稿件，或要求把成品放进 iPhone Apple Music/某个播放列表。用 edge-tts 生成 mp3 + .srt/.lrc；需要时合并全集、导入 macOS Music 播放列表并通过“同步资料库”送到 iPhone。也覆盖用户口误说成「语音转文字」但实际想把文字读出来。真正的录音/视频→文字转录（Whisper/STT）方向相反，不要调用本 skill。",
+      "when_to_use": "",
+      "aliases": [],
+      "tags": [],
+      "source": "copilot-user-skills",
+      "source_path": "copilot-user-skills/text-to-speech/SKILL.md"
+    },
+    {
+      "name": "translate-text",
+      "description": "Translate text between languages.",
+      "when_to_use": "Use to translate text, localize strings, or 翻译.",
+      "aliases": [
+        "translate",
+        "翻译"
+      ],
+      "tags": [
+        "translate",
+        "i18n"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/translate-text/SKILL.md"
+    },
+    {
+      "name": "write-docs",
+      "description": "Write README or API documentation.",
+      "when_to_use": "Use to write docs, a README, or 文档.",
+      "aliases": [
+        "docs",
+        "写文档"
+      ],
+      "tags": [
+        "docs",
+        "readme"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/write-docs/SKILL.md"
+    },
+    {
+      "name": "write-tests",
+      "description": "Write unit tests and improve coverage.",
+      "when_to_use": "Use to add unit tests, write test cases, or 写测试.",
+      "aliases": [
+        "test",
+        "写测试"
+      ],
+      "tags": [
+        "test",
+        "tdd"
+      ],
+      "source": "eyesofishtui-fixtures",
+      "source_path": "eyesofishtui-fixtures/write-tests/SKILL.md"
+    }
+  ]
+}

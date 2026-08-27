@@ -5,56 +5,56 @@
     {"id":"q002","split":"test","language":"zh","query":"帮我检查这次代码改动有没有逻辑 bug 和回归。","gold":"code-review"},
     {"id":"q003","split":"test","language":"mixed","query":"帮我 review 这个 PR，重点找 regression 和边界条件问题。","gold":"code-review"},
 
-    {"id":"q004","split":"dev","language":"en","query":"Audit this authentication change for exploitable security vulnerabilities.","gold":"security-review"},
-    {"id":"q005","split":"test","language":"zh","query":"对登录模块做一次安全审查，重点看能被利用的漏洞。","gold":"security-review"},
+    {"id":"q004","split":"test","language":"en","query":"Audit this authentication change for exploitable security vulnerabilities.","gold":"security-review"},
+    {"id":"q005","split":"dev","language":"zh","query":"对登录模块做一次安全审查，重点看能被利用的漏洞。","gold":"security-review"},
     {"id":"q006","split":"test","language":"mixed","query":"给这个 auth flow 做 threat model 和漏洞检查。","gold":"security-review"},
 
-    {"id":"q007","split":"dev","language":"en","query":"Add unit tests for the parser and raise coverage for its failure paths.","gold":"write-tests"},
+    {"id":"q007","split":"test","language":"en","query":"Add unit tests for the parser and raise coverage for its failure paths.","gold":"write-tests"},
     {"id":"q008","split":"test","language":"zh","query":"给这个解析器补单元测试，把异常路径也覆盖到。","gold":"write-tests"},
-    {"id":"q009","split":"test","language":"mixed","query":"帮我 write tests，重点补 error path 和 coverage。","gold":"write-tests"},
+    {"id":"q009","split":"dev","language":"mixed","query":"帮我 write tests，重点补 error path 和 coverage。","gold":"write-tests"},
 
     {"id":"q010","split":"dev","language":"en","query":"Profile this slow endpoint and find the main latency bottleneck.","gold":"perf-profile"},
     {"id":"q011","split":"test","language":"zh","query":"这个接口太慢了，帮我定位性能瓶颈并给出优化方向。","gold":"perf-profile"},
     {"id":"q012","split":"test","language":"mixed","query":"帮我 profile 这段代码，看看 latency 都花在哪里。","gold":"perf-profile"},
 
-    {"id":"q013","split":"dev","language":"en","query":"Write a SQL query that joins orders with users and removes duplicate rows.","gold":"sql-query"},
-    {"id":"q014","split":"test","language":"zh","query":"写一条 SQL，把订单表和用户表 join 起来并去重。","gold":"sql-query"},
+    {"id":"q013","split":"test","language":"en","query":"Write a SQL query that joins orders with users and removes duplicate rows.","gold":"sql-query"},
+    {"id":"q014","split":"dev","language":"zh","query":"写一条 SQL，把订单表和用户表 join 起来并去重。","gold":"sql-query"},
     {"id":"q015","split":"test","language":"mixed","query":"帮我优化这个 SQL query，join 后扫描的数据太多。","gold":"sql-query"},
 
-    {"id":"q016","split":"dev","language":"en","query":"Translate this Chinese product description into natural English.","gold":"translate-text"},
+    {"id":"q016","split":"test","language":"en","query":"Translate this Chinese product description into natural English.","gold":"translate-text"},
     {"id":"q017","split":"test","language":"zh","query":"把这段中文产品介绍翻译成自然英文。","gold":"translate-text"},
-    {"id":"q018","split":"test","language":"mixed","query":"把 README 这段话 translate 成中文并保持技术名词。","gold":"translate-text"},
+    {"id":"q018","split":"dev","language":"mixed","query":"把 README 这段话 translate 成中文并保持技术名词。","gold":"translate-text"},
 
     {"id":"q019","split":"dev","language":"en","query":"Quiz me on Chinese-to-English software engineering terms from these notes.","gold":"bilingual-tech-terms"},
     {"id":"q020","split":"test","language":"zh","query":"读取这份系统设计笔记，你说中文术语，我从英文选项里选。","gold":"bilingual-tech-terms"},
     {"id":"q021","split":"test","language":"mixed","query":"带我过 tech terms，每次中文题干加 English choices。","gold":"bilingual-tech-terms"},
 
-    {"id":"q022","split":"dev","language":"en","query":"Walk me through this new repository one function at a time and quiz me on the code.","gold":"code-mentor"},
-    {"id":"q023","split":"test","language":"zh","query":"带我深读这个新仓库，每次只讲一个函数，先让我猜。","gold":"code-mentor"},
+    {"id":"q022","split":"test","language":"en","query":"Walk me through this new repository one function at a time and quiz me on the code.","gold":"code-mentor"},
+    {"id":"q023","split":"dev","language":"zh","query":"带我深读这个新仓库，每次只讲一个函数，先让我猜。","gold":"code-mentor"},
     {"id":"q024","split":"test","language":"mixed","query":"做一次 code walkthrough，逐行解释后用 choices 问我。","gold":"code-mentor"},
 
-    {"id":"q025","split":"dev","language":"en","query":"Help me read this single paper section by section and explain each formula in plain language.","gold":"paper-reading-guide"},
+    {"id":"q025","split":"test","language":"en","query":"Help me read this single paper section by section and explain each formula in plain language.","gold":"paper-reading-guide"},
     {"id":"q026","split":"test","language":"zh","query":"带我精读这一篇论文，按章节推进，公式先讲直觉。","gold":"paper-reading-guide"},
-    {"id":"q027","split":"test","language":"mixed","query":"陪我 paper reading，先做 60 秒定位，再逐节讲。","gold":"paper-reading-guide"},
+    {"id":"q027","split":"dev","language":"mixed","query":"陪我 paper reading，先做 60 秒定位，再逐节讲。","gold":"paper-reading-guide"},
 
     {"id":"q028","split":"dev","language":"en","query":"Draft the Methods and Experiments sections of my machine learning paper from these research notes.","gold":"research-paper-writing"},
     {"id":"q029","split":"test","language":"zh","query":"根据这些实验记录写论文的方法和实验章节，并检查论点证据。","gold":"research-paper-writing"},
     {"id":"q030","split":"test","language":"mixed","query":"帮我 draft paper introduction，再做 claim-evidence map 和 self-review。","gold":"research-paper-writing"},
 
-    {"id":"q031","split":"dev","language":"en","query":"Turn these interview practice scripts into an MP3 with synchronized subtitles.","gold":"text-to-speech"},
-    {"id":"q032","split":"test","language":"zh","query":"把这些面试稿读成通勤 MP3，并生成同步字幕。","gold":"text-to-speech"},
+    {"id":"q031","split":"test","language":"en","query":"Turn these interview practice scripts into an MP3 with synchronized subtitles.","gold":"text-to-speech"},
+    {"id":"q032","split":"dev","language":"zh","query":"把这些面试稿读成通勤 MP3，并生成同步字幕。","gold":"text-to-speech"},
     {"id":"q033","split":"test","language":"mixed","query":"把这批文字做成 text-to-speech 音频和 bilingual LRC。","gold":"text-to-speech"},
 
-    {"id":"q034","split":"dev","language":"en","query":"Find a small first contribution in an active open-source repository and prepare the pull request.","gold":"contributor"},
+    {"id":"q034","split":"test","language":"en","query":"Find a small first contribution in an active open-source repository and prepare the pull request.","gold":"contributor"},
     {"id":"q035","split":"test","language":"zh","query":"帮我找一个适合第一次开源贡献的 README 小问题并准备 PR。","gold":"contributor"},
-    {"id":"q036","split":"test","language":"mixed","query":"想做 first contribution，先找 typo 或 broken link 再验证。","gold":"contributor"},
+    {"id":"q036","split":"dev","language":"mixed","query":"想做 first contribution，先找 typo 或 broken link 再验证。","gold":"contributor"},
 
     {"id":"q037","split":"dev","language":"en","query":"Scan this repository and turn verified architecture work into senior-level resume bullets with file evidence.","gold":"repo-resume-architect"},
     {"id":"q038","split":"test","language":"zh","query":"扫描这个仓库，按五年以上架构师提炼可验证的简历亮点。","gold":"repo-resume-architect"},
     {"id":"q039","split":"test","language":"mixed","query":"把这个 repo 做一次 architecture resume review，所有主张带 file:line。","gold":"repo-resume-architect"},
 
-    {"id":"q040","split":"dev","language":"en","query":"Design a versioned REST API for creating and cancelling subscriptions.","gold":"api-design"},
-    {"id":"q041","split":"test","language":"zh","query":"设计一组创建和取消订阅的 REST 接口。","gold":"api-design"},
+    {"id":"q040","split":"test","language":"en","query":"Design a versioned REST API for creating and cancelling subscriptions.","gold":"api-design"},
+    {"id":"q041","split":"dev","language":"zh","query":"设计一组创建和取消订阅的 REST 接口。","gold":"api-design"},
     {"id":"q042","split":"test","language":"mixed","query":"帮我做 API design，定义 endpoint、request 和 error response。","gold":"api-design"},
 
     {"id":"q043","split":"dev","language":"en","query":"Explain the difference between pCTR and pCVR in one paragraph. Do not quiz me.","gold":null},

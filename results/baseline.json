@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T06:40:18.224852+00:00",
+  "python_version": "3.9.6",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "catalog_size": 26,
+  "query_count": 51,
+  "dev_query_count": 17,
+  "test_query_count": 34,
+  "latency_repeats": 100,
+  "runs": [
+    {
+      "name": "original/weighted-token",
+      "threshold_from_dev": 25.0,
+      "dev_routing_accuracy": 0.7059,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.5357,
+        "hit_at_3": 0.7143,
+        "mrr": 0.6691,
+        "abstention_accuracy": 0.8333,
+        "routing_accuracy": 0.5294,
+        "hit_at_1_by_language": {
+          "en": 0.5556,
+          "mixed": 0.6,
+          "zh": 0.4444
+        }
+      },
+      "latency": {
+        "median_ms": 0.4052,
+        "p95_ms": 0.4352,
+        "max_ms": 0.4388
+      },
+      "errors": [
+        {
+          "id": "q002",
+          "gold": "code-review",
+          "predicted": "bilingual-tech-terms",
+          "raw_top": "bilingual-tech-terms",
+          "score": 33.0
+        },
+        {
+          "id": "q003",
+          "gold": "code-review",
+          "predicted": null,
+          "raw_top": "code-review",
+          "score": 23.0
+        },
+        {
+          "id": "q006",
+          "gold": "security-review",
+          "predicted": null,
+          "raw_top": "code-review",
+          "score": 16.0
+        },
+        {
+          "id": "q008",
+          "gold": "write-tests",
+          "predicted": null,
+          "raw_top": "paper-reading-guide",
+          "score": 24.0
+        },
+        {
+          "id": "q012",
+          "gold": "perf-profile",
+          "predicted": null,
+          "raw_top": "paper-reading-guide",
+          "score": 18.0
+        },
+        {
+          "id": "q016",
+          "gold": "translate-text",
+          "predicted": null,
+          "raw_top": "translate-text",
+          "score": 20.0
+        },
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": null,
+          "raw_top": "asu",
+          "score": 24.0
+        },
+        {
+          "id": "q022",
+          "gold": "code-mentor",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 29.0
+        },
+        {
+          "id": "q024",
+          "gold": "code-mentor",
+          "predicted": null,
+          "raw_top": "explain-code",
+          "score": 24.0
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": null,
+          "raw_top": "explain-code",
+          "score": 20.0
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": "repo-resume-architect",
+          "raw_top": "repo-resume-architect",
+          "score": 36.0
+        },
+        {
+          "id": "q030",
+          "gold": "research-paper-writing",
+          "predicted": null,
+          "raw_top": "code-review",
+          "score": 20.0
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": null,
+          "raw_top": "goal",
+          "score": 6.0
+        },
+        {
+          "id": "q034",
+          "gold": "contributor",
+          "predicted": null,
+          "raw_top": "goal",
+          "score": 18.0
+        },
+        {
+          "id": "q035",
+          "gold": "contributor",
+          "predicted": "code-mentor",
+          "raw_top": "code-mentor",
+          "score": 33.0
+        },
+        {
+          "id": "q050",
+          "gold": null,
+          "predicted": "bilingual-tech-terms",
+          "score": 36.0
+        }
+      ]
+    },
+    {
+      "name": "original/char-ngram",
+      "threshold_from_dev": 0.0,
+      "dev_routing_accuracy": 0.6471,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.6429,
+        "hit_at_3": 0.8214,
+        "mrr": 0.7356,
+        "abstention_accuracy": 0.0,
+        "routing_accuracy": 0.5294,
+        "hit_at_1_by_language": {
+          "en": 0.6667,
+          "mixed": 0.8,
+          "zh": 0.4444
+        }
+      },
+      "latency": {
+        "median_ms": 0.1603,
+        "p95_ms": 0.3549,
+        "max_ms": 0.4041
+      },
+      "errors": [
+        {
+          "id": "q002",
+          "gold": "code-review",
+          "predicted": "debug-error",
+          "raw_top": "debug-error",
+          "score": 0.127539
+        },
+        {
+          "id": "q008",
+          "gold": "write-tests",
+          "predicted": "text-to-speech",
+          "raw_top": "text-to-speech",
+          "score": 0.035656
+        },
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": "bilingual-tech-terms",
+          "raw_top": "bilingual-tech-terms",
+          "score": 0.124421
+        },
+        {
+          "id": "q022",
+          "gold": "code-mentor",
+          "predicted": "research-paper-writing",
+          "raw_top": "research-paper-writing",
+          "score": 0.19575
+        },
+        {
+          "id": "q024",
+          "gold": "code-mentor",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.095935
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": "explain-code",
+          "raw_top": "explain-code",
+          "score": 0.388065
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": "paper-reading-guide",
+          "raw_top": "paper-reading-guide",
+          "score": 0.064731
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": "research-paper-writing",
+          "raw_top": "research-paper-writing",
+          "score": 0.197955
+        },
+        {
+          "id": "q035",
+          "gold": "contributor",
+          "predicted": "write-docs",
+          "raw_top": "write-docs",
+          "score": 0.237235
+        },
+        {
+          "id": "q039",
+          "gold": "repo-resume-architect",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.23855
+        },
+        {
+          "id": "q046",
+          "gold": null,
+          "predicted": "api-design",
+          "score": 0.239721
+        },
+        {
+          "id": "q047",
+          "gold": null,
+          "predicted": "text-to-speech",
+          "score": 0.016033
+        },
+        {
+          "id": "q048",
+          "gold": null,
+          "predicted": "pdf-export",
+          "score": 0.182574
+        },
+        {
+          "id": "q049",
+          "gold": null,
+          "predicted": "translate-text",
+          "score": 0.236108
+        },
+        {
+          "id": "q050",
+          "gold": null,
+          "predicted": "code-mentor",
+          "score": 0.031199
+        },
+        {
+          "id": "q051",
+          "gold": null,
+          "predicted": "research-paper-writing",
+          "score": 0.211727
+        }
+      ]
+    },
+    {
+      "name": "original/rrf-fusion",
+      "threshold_from_dev": 0.0,
+      "dev_routing_accuracy": 0.7059,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.6071,
+        "hit_at_3": 0.8214,
+        "mrr": 0.7225,
+        "abstention_accuracy": 0.0,
+        "routing_accuracy": 0.5,
+        "hit_at_1_by_language": {
+          "en": 0.5556,
+          "mixed": 0.7,
+          "zh": 0.5556
+        }
+      },
+      "latency": {
+        "median_ms": 0.5805,
+        "p95_ms": 0.7752,
+        "max_ms": 0.83
+      },
+      "errors": [
+        {
+          "id": "q006",
+          "gold": "security-review",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.032018
+        },
+        {
+          "id": "q008",
+          "gold": "write-tests",
+          "predicted": "text-to-speech",
+          "raw_top": "text-to-speech",
+          "score": 0.032522
+        },
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": "asu",
+          "raw_top": "asu",
+          "score": 0.032522
+        },
+        {
+          "id": "q022",
+          "gold": "code-mentor",
+          "predicted": "goal",
+          "raw_top": "goal",
+          "score": 0.032002
+        },
+        {
+          "id": "q024",
+          "gold": "code-mentor",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.032018
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": "explain-code",
+          "raw_top": "explain-code",
+          "score": 0.032787
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": "paper-reading-guide",
+          "raw_top": "paper-reading-guide",
+          "score": 0.031778
+        },
+        {
+          "id": "q030",
+          "gold": "research-paper-writing",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.032522
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": "goal",
+          "raw_top": "goal",
+          "score": 0.032522
+        },
+        {
+          "id": "q034",
+          "gold": "contributor",
+          "predicted": "goal",
+          "raw_top": "goal",
+          "score": 0.032522
+        },
+        {
+          "id": "q035",
+          "gold": "contributor",
+          "predicted": "code-mentor",
+          "raw_top": "code-mentor",
+          "score": 0.032266
+        },
+        {
+          "id": "q046",
+          "gold": null,
+          "predicted": "api-design",
+          "score": 0.032787
+        },
+        {
+          "id": "q047",
+          "gold": null,
+          "predicted": "text-to-speech",
+          "score": 0.031778
+        },
+        {
+          "id": "q048",
+          "gold": null,
+          "predicted": "pdf-export",
+          "score": 0.031545
+        },
+        {
+          "id": "q049",
+          "gold": null,
+          "predicted": "translate-text",
+          "score": 0.032787
+        },
+        {
+          "id": "q050",
+          "gold": null,
+          "predicted": "bilingual-tech-terms",
+          "score": 0.032522
+        },
+        {
+          "id": "q051",
+          "gold": null,
+          "predicted": "bilingual-tech-terms",
+          "score": 0.029643
+        }
+      ]
+    },
+    {
+      "name": "bilingual-augmented/weighted-token",
+      "threshold_from_dev": 22.0,
+      "dev_routing_accuracy": 0.8824,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.75,
+        "hit_at_3": 0.9643,
+        "mrr": 0.8563,
+        "abstention_accuracy": 0.6667,
+        "routing_accuracy": 0.7353,
+        "hit_at_1_by_language": {
+          "en": 0.6667,
+          "mixed": 1.0,
+          "zh": 0.5556
+        }
+      },
+      "latency": {
+        "median_ms": 0.4417,
+        "p95_ms": 0.4703,
+        "max_ms": 0.4882
+      },
+      "errors": [
+        {
+          "id": "q002",
+          "gold": "code-review",
+          "predicted": "bilingual-tech-terms",
+          "raw_top": "bilingual-tech-terms",
+          "score": 43.0
+        },
+        {
+          "id": "q008",
+          "gold": "write-tests",
+          "predicted": "paper-reading-guide",
+          "raw_top": "paper-reading-guide",
+          "score": 29.0
+        },
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": "bilingual-tech-terms",
+          "raw_top": "bilingual-tech-terms",
+          "score": 41.0
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": "research-paper-writing",
+          "raw_top": "research-paper-writing",
+          "score": 22.0
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": "paper-reading-guide",
+          "raw_top": "paper-reading-guide",
+          "score": 44.0
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": null,
+          "raw_top": "repo-resume-architect",
+          "score": 10.0
+        },
+        {
+          "id": "q034",
+          "gold": "contributor",
+          "predicted": null,
+          "raw_top": "goal",
+          "score": 18.0
+        },
+        {
+          "id": "q047",
+          "gold": null,
+          "predicted": "bilingual-tech-terms",
+          "score": 31.0
+        },
+        {
+          "id": "q050",
+          "gold": null,
+          "predicted": "code-mentor",
+          "score": 43.0
+        }
+      ]
+    },
+    {
+      "name": "bilingual-augmented/char-ngram",
+      "threshold_from_dev": 0.13678711,
+      "dev_routing_accuracy": 0.7647,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.75,
+        "hit_at_3": 0.9286,
+        "mrr": 0.8448,
+        "abstention_accuracy": 0.3333,
+        "routing_accuracy": 0.5882,
+        "hit_at_1_by_language": {
+          "en": 0.7778,
+          "mixed": 0.9,
+          "zh": 0.5556
+        }
+      },
+      "latency": {
+        "median_ms": 0.1631,
+        "p95_ms": 0.3508,
+        "max_ms": 0.3965
+      },
+      "errors": [
+        {
+          "id": "q002",
+          "gold": "code-review",
+          "predicted": null,
+          "raw_top": "debug-error",
+          "score": 0.113573
+        },
+        {
+          "id": "q008",
+          "gold": "write-tests",
+          "predicted": null,
+          "raw_top": "write-tests",
+          "score": 0.093925
+        },
+        {
+          "id": "q011",
+          "gold": "perf-profile",
+          "predicted": null,
+          "raw_top": "perf-profile",
+          "score": 0.097303
+        },
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": null,
+          "raw_top": "bilingual-tech-terms",
+          "score": 0.10907
+        },
+        {
+          "id": "q024",
+          "gold": "code-mentor",
+          "predicted": null,
+          "raw_top": "code-mentor",
+          "score": 0.107027
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": "explain-code",
+          "raw_top": "explain-code",
+          "score": 0.386385
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": null,
+          "raw_top": "paper-reading-guide",
+          "score": 0.063815
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": "research-paper-writing",
+          "raw_top": "research-paper-writing",
+          "score": 0.18156
+        },
+        {
+          "id": "q035",
+          "gold": "contributor",
+          "predicted": "write-docs",
+          "raw_top": "write-docs",
+          "score": 0.228016
+        },
+        {
+          "id": "q039",
+          "gold": "repo-resume-architect",
+          "predicted": "code-review",
+          "raw_top": "code-review",
+          "score": 0.25395
+        },
+        {
+          "id": "q046",
+          "gold": null,
+          "predicted": "api-design",
+          "score": 0.242087
+        },
+        {
+          "id": "q048",
+          "gold": null,
+          "predicted": "pdf-export",
+          "score": 0.18191
+        },
+        {
+          "id": "q049",
+          "gold": null,
+          "predicted": "translate-text",
+          "score": 0.24614
+        },
+        {
+          "id": "q051",
+          "gold": null,
+          "predicted": "research-paper-writing",
+          "score": 0.189787
+        }
+      ]
+    },
+    {
+      "name": "bilingual-augmented/rrf-fusion",
+      "threshold_from_dev": 0.0,
+      "dev_routing_accuracy": 0.8235,
+      "test": {
+        "queries": 34,
+        "positive_queries": 28,
+        "negative_queries": 6,
+        "hit_at_1": 0.8571,
+        "hit_at_3": 0.9286,
+        "mrr": 0.9,
+        "abstention_accuracy": 0.0,
+        "routing_accuracy": 0.7059,
+        "hit_at_1_by_language": {
+          "en": 0.7778,
+          "mixed": 1.0,
+          "zh": 0.7778
+        }
+      },
+      "latency": {
+        "median_ms": 0.6194,
+        "p95_ms": 0.8206,
+        "max_ms": 0.8585
+      },
+      "errors": [
+        {
+          "id": "q017",
+          "gold": "translate-text",
+          "predicted": "bilingual-tech-terms",
+          "raw_top": "bilingual-tech-terms",
+          "score": 0.032787
+        },
+        {
+          "id": "q025",
+          "gold": "paper-reading-guide",
+          "predicted": "explain-code",
+          "raw_top": "explain-code",
+          "score": 0.032522
+        },
+        {
+          "id": "q029",
+          "gold": "research-paper-writing",
+          "predicted": "paper-reading-guide",
+          "raw_top": "paper-reading-guide",
+          "score": 0.032787
+        },
+        {
+          "id": "q031",
+          "gold": "text-to-speech",
+          "predicted": "goal",
+          "raw_top": "goal",
+          "score": 0.032002
+        },
+        {
+          "id": "q046",
+          "gold": null,
+          "predicted": "api-design",
+          "score": 0.032787
+        },
+        {
+          "id": "q047",
+          "gold": null,
+          "predicted": "text-to-speech",
+          "score": 0.031778
+        },
+        {
+          "id": "q048",
+          "gold": null,
+          "predicted": "pdf-export",
+          "score": 0.031319
+        },
+        {
+          "id": "q049",
+          "gold": null,
+          "predicted": "translate-text",
+          "score": 0.032522
+        },
+        {
+          "id": "q050",
+          "gold": null,
+          "predicted": "code-mentor",
+          "score": 0.032787
+        },
+        {
+          "id": "q051",
+          "gold": null,
+          "predicted": "bilingual-tech-terms",
+          "score": 0.029643
+        }
+      ]
+    }
+  ]
+}
