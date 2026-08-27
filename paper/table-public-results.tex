@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.2pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Hit@1} & \multicolumn{3}{c}{Recall@10} & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & EN & ZH & ZH+Inst & EN & ZH & ZH+Inst & ms/query \\
+\midrule
+Word TF--IDF & 37.0\% & 8.2\% & 8.2\% & 46.8\% & 17.7\% & 17.7\% & 5.7 \\
+BM25 & 46.6\% & 19.2\% & 12.3\% & 46.0\% & 21.7\% & 17.1\% & 5.6 \\
+Char TF--IDF & \textbf{49.3\%} & 21.9\% & 24.7\% & 50.1\% & 31.4\% & 29.4\% & 14.8 \\
+mE5-small & 13.7\% & 0.0\% & 0.0\% & 15.5\% & 0.0\% & 0.0\% & 12.0 \\
+SR-Emb-0.6B & 45.2\% & 41.1\% & 26.0\% & 50.5\% & 43.8\% & 38.9\% & 140.8 \\
+SR+Char RRF & \textbf{49.3\%} & \textbf{42.5\%} & \textbf{39.7\%} & \textbf{54.9\%} & \textbf{46.0\%} & \textbf{42.1\%} & 155.6 \\
+\bottomrule
+\end{tabular}
+\caption{Metadata-only retrieval on the SkillRouter hard tier.  All methods
+rank the same 79,141 English skill names and descriptions.  Bold marks the best
+value in each quality column.  Latency excludes one-time index construction.}
+\label{tab:public}
+\end{table*}
