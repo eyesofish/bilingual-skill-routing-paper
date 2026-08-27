@@ -2,4 +2,17 @@ __pycache__/
 *.pyc
 .DS_Store
 results/*.tmp
+.venv/
+build/
+data/external/
+models/
+vendor/AuthorKit27.zip
+vendor/aaai27/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
 
