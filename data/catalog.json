@@ -13,8 +13,8 @@
         "api",
         "design"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/api-design/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/api-design/SKILL.md"
     },
     {
       "name": "asu",
@@ -55,8 +55,8 @@
         "review",
         "code"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/code-review/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/code-review/SKILL.md"
     },
     {
       "name": "contributor",
@@ -79,8 +79,8 @@
         "debug",
         "error"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/debug-error/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/debug-error/SKILL.md"
     },
     {
       "name": "explain-code",
@@ -94,8 +94,8 @@
         "explain",
         "understand"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/explain-code/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/explain-code/SKILL.md"
     },
     {
       "name": "git-commit",
@@ -109,8 +109,8 @@
         "git",
         "commit"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/git-commit/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/git-commit/SKILL.md"
     },
     {
       "name": "goal",
@@ -130,8 +130,8 @@
         "lint",
         "style"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/lint-helper/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/lint-helper/SKILL.md"
     },
     {
       "name": "paper-reading-guide",
@@ -151,8 +151,8 @@
         "pdf",
         "export"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/pdf-export/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/pdf-export/SKILL.md"
     },
     {
       "name": "perf-profile",
@@ -166,8 +166,8 @@
         "performance",
         "profiling"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/perf-profile/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/perf-profile/SKILL.md"
     },
     {
       "name": "refactor",
@@ -180,8 +180,8 @@
         "refactor",
         "cleanup"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/refactor/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/refactor/SKILL.md"
     },
     {
       "name": "regex-helper",
@@ -195,8 +195,8 @@
         "regex",
         "pattern"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/regex-helper/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/regex-helper/SKILL.md"
     },
     {
       "name": "rename-symbol",
@@ -210,8 +210,8 @@
         "rename",
         "refactor"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/rename-symbol/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/rename-symbol/SKILL.md"
     },
     {
       "name": "repo-resume-architect",
@@ -242,8 +242,8 @@
         "security",
         "review"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/security-review/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/security-review/SKILL.md"
     },
     {
       "name": "skill-creator",
@@ -266,8 +266,8 @@
         "sql",
         "database"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/sql-query/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/sql-query/SKILL.md"
     },
     {
       "name": "text-to-speech",
@@ -290,8 +290,8 @@
         "translate",
         "i18n"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/translate-text/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/translate-text/SKILL.md"
     },
     {
       "name": "write-docs",
@@ -305,8 +305,8 @@
         "docs",
         "readme"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/write-docs/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/write-docs/SKILL.md"
     },
     {
       "name": "write-tests",
@@ -320,8 +320,8 @@
         "test",
         "tdd"
       ],
-      "source": "eyesofishtui-fixtures",
-      "source_path": "eyesofishtui-fixtures/write-tests/SKILL.md"
+      "source": "controlled-fixtures",
+      "source_path": "controlled-fixtures/write-tests/SKILL.md"
     }
   ]
 }

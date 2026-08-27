@@ -11,12 +11,11 @@ no-skill cases. We compare original metadata with a bilingual alias treatment
 using three CPU-only methods: weighted token overlap, character n-gram TF-IDF,
 and reciprocal-rank fusion. Thresholds for abstention are selected only on a
 development split. In the first test run, bilingual metadata raises weighted
-token Hit@1 from 53.6% to 75.0% and combined routing accuracy from 52.9% to
-73.5%, while keeping median query latency below 0.45 ms. Rank fusion reaches
-85.7% Hit@1 with bilingual metadata, but fails to abstain on no-skill requests.
+token Hit@1 from 53.6% to 71.4% and combined routing accuracy from 52.9% to
+64.7%, while keeping median query latency below 0.40 ms. Rank fusion reaches
+75.0% Hit@1 with bilingual metadata, but fails to abstain on no-skill requests.
 These results suggest that metadata language coverage can matter more than a
 more complex sparse ranker in a small registry, and that retrieval quality and
 safe abstention must be evaluated separately. The current benchmark is small
 and author-written, so the results are a starting point rather than a general
 claim about agent skill routing.
-

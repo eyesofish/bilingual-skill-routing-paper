@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build_catalog, parse_frontmatter
+from scripts.build_catalog import parse_frontmatter
 from scripts.evaluate import (
     CharNgramRanker,
     apply_augments,
@@ -43,23 +43,41 @@ class FrontmatterTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
-    def test_builds_sanitized_catalog(self) -> None:
-        catalog = build_catalog(ROOT / "config/sources.json")
-        self.assertGreaterEqual(len(catalog), 20)
+    def test_catalog_snapshot_is_sanitized(self) -> None:
+        catalog = json.loads((ROOT / "data/catalog.json").read_text())["skills"]
+        self.assertEqual(len(catalog), 26)
         self.assertIn("code-review", {skill["name"] for skill in catalog})
         for skill in catalog:
             self.assertNotIn(str(Path.home()), skill["source_path"])
+            self.assertIn(
+                skill["source"], {"copilot-user-skills", "controlled-fixtures"}
+            )
 
     def test_query_gold_labels_exist(self) -> None:
-        catalog = build_catalog(ROOT / "config/sources.json")
+        catalog = json.loads((ROOT / "data/catalog.json").read_text())["skills"]
         queries = json.loads((ROOT / "data/queries.json").read_text())["queries"]
         validate_queries(catalog, queries)
+
+    def test_metadata_augments_use_development_queries_only(self) -> None:
+        queries = {
+            query["id"]: query
+            for query in json.loads((ROOT / "data/queries.json").read_text())["queries"]
+        }
+        augments = json.loads((ROOT / "data/metadata_augments.json").read_text())
+        provenance = json.loads(
+            (ROOT / "data/metadata_augments_provenance.json").read_text()
+        )
+        self.assertEqual(set(augments), set(provenance["sources"]))
+        for skill, query_id in provenance["sources"].items():
+            query = queries[query_id]
+            self.assertEqual(query["split"], "dev")
+            self.assertEqual(query["gold"], skill)
 
 
 class RankingTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.catalog = build_catalog(ROOT / "config/sources.json")
+        cls.catalog = json.loads((ROOT / "data/catalog.json").read_text())["skills"]
         cls.augments = json.loads((ROOT / "data/metadata_augments.json").read_text())
 
     def test_weighted_token_finds_existing_bilingual_alias(self) -> None:
@@ -68,7 +86,7 @@ class RankingTests(unittest.TestCase):
 
     def test_augmentation_adds_cross_language_signal(self) -> None:
         augmented = apply_augments(self.catalog, self.augments)
-        results = weighted_token_rank(augmented, "写论文")
+        results = weighted_token_rank(augmented, "draft methods and experiments")
         self.assertEqual(results[0].name, "research-paper-writing")
 
     def test_char_ngram_returns_ranked_results(self) -> None:

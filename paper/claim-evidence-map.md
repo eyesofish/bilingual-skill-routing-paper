@@ -4,9 +4,9 @@
 |---|---|---|
 | The benchmark contains 26 skills and 51 queries. | `data/catalog.json`, `data/queries.json`, `results/baseline.json` | Supported |
 | Both development and test sets include English, Chinese, and mixed-language prompts. | `data/queries.json` | Supported |
-| Bilingual augmentation improves weighted-token Hit@1 from 53.6% to 75.0%. | `results/baseline.json` | Supported for this benchmark |
-| Bilingual augmentation improves weighted-token routing accuracy from 52.9% to 73.5%. | `results/baseline.json` | Supported for this benchmark |
-| Bilingual RRF reaches 85.7% Hit@1. | `results/baseline.json` | Supported for this benchmark |
+| Development-only bilingual augmentation improves weighted-token Hit@1 from 53.6% to 71.4%. | `results/baseline.json`, `data/metadata_augments_provenance.json` | Supported for this benchmark |
+| Development-only bilingual augmentation improves weighted-token routing accuracy from 52.9% to 64.7%. | `results/baseline.json`, `data/metadata_augments_provenance.json` | Supported for this benchmark |
+| Bilingual RRF reaches 75.0% Hit@1. | `results/baseline.json` | Supported for this benchmark |
 | The current RRF configuration cannot safely abstain. | Test abstention accuracy is 0% in both RRF runs. | Supported for this split |
 | Every evaluated method has sub-millisecond median latency on this machine. | `results/baseline.json` records 0.16-0.62 ms median latency. | Supported on the recorded machine |
 | Bilingual metadata matters more than retrieval complexity in small registries. | Current weighted-token augmentation gain is larger than replacing original weighted-token with original RRF. | Preliminary; needs larger corpus and confidence intervals |
@@ -24,4 +24,3 @@
    is weak.
 4. **Latency:** the reported values exclude model loading because all current
    methods are deterministic sparse methods.
-

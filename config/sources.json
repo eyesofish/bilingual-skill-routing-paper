@@ -17,10 +17,9 @@
       ]
     },
     {
-      "label": "eyesofishtui-fixtures",
-      "root": "~/personal/eyesofishTUI/test/fixtures/skills",
+      "label": "controlled-fixtures",
+      "root": "../controlled-fixtures",
       "allow": ["*"]
     }
   ]
 }
-

@@ -1,17 +1,17 @@
 {
-  "api-design": ["接口设计", "设计 API", "REST endpoint design"],
-  "bilingual-tech-terms": ["中英文术语抽查", "你说中文我选英文", "Chinese to English tech terms"],
-  "code-mentor": ["代码带读", "逐行读代码", "walk me through this repository"],
-  "code-review": ["检查代码", "找 bug", "review code", "PR review"],
-  "contributor": ["开源贡献", "first contribution", "找一个 typo PR"],
-  "paper-reading-guide": ["论文陪读", "读懂这篇论文", "walk me through this paper"],
-  "perf-profile": ["性能优化", "性能瓶颈", "profile latency"],
-  "repo-resume-architect": ["扫描仓库提炼简历亮点", "架构师项目复盘", "turn this repo into resume bullets"],
-  "research-paper-writing": ["写论文", "论文结构", "draft a research paper", "paper self-review"],
-  "security-review": ["安全审查", "漏洞检查", "security audit", "threat model"],
-  "sql-query": ["写 SQL", "优化查询", "join tables"],
-  "text-to-speech": ["文字转语音", "生成 mp3", "text to speech"],
-  "translate-text": ["翻译文本", "翻译成英文", "translate this"],
-  "write-tests": ["写测试", "增加单元测试", "improve test coverage"]
+  "api-design": ["设计 REST 接口", "创建和取消订阅"],
+  "bilingual-tech-terms": ["Chinese-to-English software engineering terms", "quiz technical terms"],
+  "code-mentor": ["深读新仓库", "每次讲一个函数", "先让我猜"],
+  "code-review": ["review pull request", "logic bugs", "regressions"],
+  "contributor": ["first contribution", "typo", "broken link"],
+  "paper-reading-guide": ["paper reading", "60 秒定位", "逐节讲"],
+  "perf-profile": ["profile slow endpoint", "latency bottleneck"],
+  "repo-resume-architect": ["scan repository", "architecture resume bullets", "file evidence"],
+  "research-paper-writing": ["draft methods and experiments", "machine learning paper", "research notes"],
+  "security-review": ["安全审查", "登录模块漏洞", "可利用漏洞"],
+  "sql-query": ["写 SQL", "订单表和用户表 join", "SQL 去重"],
+  "text-to-speech": ["面试稿转 MP3", "通勤音频", "同步字幕"],
+  "translate-text": ["translate README", "翻译成中文", "保留技术名词"],
+  "write-tests": ["write tests", "error path", "coverage"]
 }
 

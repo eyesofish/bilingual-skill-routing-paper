@@ -1,0 +1,19 @@
+{
+  "policy": "Every alias is derived only from the target skill's development query. Test queries were not used.",
+  "sources": {
+    "api-design": "q041",
+    "bilingual-tech-terms": "q019",
+    "code-mentor": "q023",
+    "code-review": "q001",
+    "contributor": "q036",
+    "paper-reading-guide": "q027",
+    "perf-profile": "q010",
+    "repo-resume-architect": "q037",
+    "research-paper-writing": "q028",
+    "security-review": "q005",
+    "sql-query": "q014",
+    "text-to-speech": "q032",
+    "translate-text": "q018",
+    "write-tests": "q009"
+  }
+}
