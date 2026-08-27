@@ -78,6 +78,33 @@ class RankingTests(unittest.TestCase):
         self.assertEqual(results[0].name, "security-review")
 
 
+class ArtifactTests(unittest.TestCase):
+    def test_generated_result_matches_current_dataset(self) -> None:
+        result = json.loads((ROOT / "results/baseline.json").read_text())
+        self.assertEqual(result["catalog_size"], 26)
+        self.assertEqual(result["query_count"], 51)
+        self.assertEqual(len(result["runs"]), 6)
+
+        runs = {run["name"]: run for run in result["runs"]}
+        original = runs["original/weighted-token"]["test"]["hit_at_1"]
+        augmented = runs["bilingual-augmented/weighted-token"]["test"]["hit_at_1"]
+        self.assertGreater(augmented, original)
+        for run in result["runs"]:
+            self.assertLess(run["latency"]["median_ms"], 1.0)
+
+    def test_initial_paper_assets_exist(self) -> None:
+        required = [
+            "abstract-draft.md",
+            "outline.md",
+            "experiment-plan.md",
+            "claim-evidence-map.md",
+            "related-work.md",
+        ]
+        for name in required:
+            path = ROOT / "paper" / name
+            self.assertTrue(path.is_file(), name)
+            self.assertGreater(len(path.read_text().strip()), 200, name)
+
+
 if __name__ == "__main__":
     unittest.main()
-
