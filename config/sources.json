@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "label": "copilot-user-skills",
+      "root": "~/.copilot/skills",
+      "allow": [
+        "asu",
+        "bilingual-tech-terms",
+        "code-mentor",
+        "contributor",
+        "goal",
+        "paper-reading-guide",
+        "repo-resume-architect",
+        "research-paper-writing",
+        "skill-creator",
+        "text-to-speech"
+      ]
+    },
+    {
+      "label": "eyesofishtui-fixtures",
+      "root": "~/personal/eyesofishTUI/test/fixtures/skills",
+      "allow": ["*"]
+    }
+  ]
+}
+
